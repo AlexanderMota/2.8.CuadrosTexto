@@ -37,8 +37,7 @@ namespace CuadrosTexto
         {
             if (e.Key == Key.F2)
             {
-                int temo = 0;
-                if(int.Parse(TextoEdad.Text) == null)
+                if(!int.TryParse(TextoEdad.Text,out _))
                 {
                     this.TextoAyuda.Text = this.TextoAyuda.Text.Length == 0 ? "No es un número." : "";
                 }
